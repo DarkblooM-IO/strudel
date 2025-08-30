@@ -1,0 +1,5 @@
+// "idk" @by ÐarkbloøM
+
+$: s("bd*4, [- rim]*2, [- hh]*4").gain(.45)
+$: note("<b2 g2 e2 gb2>*2").sound("triangle").attack(.3).gain(.3)
+$: note("<f# [d e] d <[e f#] [d db]>>*2").sound("square").lpf("200 1000").attack(2)
