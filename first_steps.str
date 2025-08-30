@@ -1,0 +1,15 @@
+// "First Steps" @by ÐarkbloøM
+
+setcpm(90/4)
+
+stack(
+  // melody
+  note("<[c#5@2 - b4][g#4@2 - f#4][g#4 a4 g#4 f#4][g#4@4] -@4>*2").sound("gm_viola").lpf(900).attack(.1),
+
+  // bass
+  note("<c#2 e2 g#2 d#2>*2").s("gm_bassoon").lpf(400).attack(.7),
+
+  // drums
+  s("hh*8").bank("tr707").gain(.1),
+  s("[bd - bd -][- - - -][- - bd bd][- bd bd -]").gain(.3), s("[- sd:1]*2").bank("tr808").lpf(1500)
+)
