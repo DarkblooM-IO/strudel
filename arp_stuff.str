@@ -1,0 +1,12 @@
+// "arp stuff" @by ÐarkbloøM
+stack(
+  // arp
+  n("0 5 6 <7 7 7 9>").chord("<D^7 F#-9 C#- A>")
+  .voicing().s("supersaw").fast(2),
+  // chords
+  chord("D^7 F#-9 C#- A")
+  .voicing().s("supersaw").slow(4).lpf(800),
+
+  // kick
+  s("bd:1*4")
+).gain(.05)
