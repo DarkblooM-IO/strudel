@@ -1,14 +1,26 @@
 // "arp stuff" @by ÐarkbloøM
 
-const vol = slider(0.06,.01,1,.01)
+const vol = .06
 
 // arp
 $: n("0 5 6 7").chord("<D^7 F#-9 C#- A>")
-.voicing().s("supersaw").fast(2).gain(vol)
-._pianoroll()
+  .voicing()
+  .s("supersaw")
+  .fast(2)
+  .gain(vol)
+  ._pianoroll()
 // chords
 $: chord("D^7 F#-9 C#- A")
-.voicing().s("supersaw").slow(4).lpf(800).gain(vol)
+  .voicing()
+  .s("supersaw")
+  .slow(4)
+  .lpf(800)
+  .gain(vol)
+  ._pianoroll()
 
 // kick
-$: s("bd:1*4").duck(4).duckdepth(.7).gain(vol)
+$: s("bd:1*4")
+  .duck(4)
+  .duckdepth(.7)
+  .gain(vol)
+  ._scope()
