@@ -1,16 +1,13 @@
 // "arp stuff" @by ÐarkbloøM
 
-const vol = .06
-
-// arp
-$: n("0 5 6 7").chord("<D^7 F#-9 C#- A>")
+const arp = n("0 5 6 7").chord("<D^7 F#-9 C#- A>")
   .voicing()
   .s("supersaw")
   .fast(2)
   .gain(vol)
   ._pianoroll()
-// chords
-$: chord("D^7 F#-9 C#- A")
+
+const chd = chord("D^7 F#-9 C#- A")
   .voicing()
   .s("supersaw")
   .slow(4)
@@ -18,9 +15,14 @@ $: chord("D^7 F#-9 C#- A")
   .gain(vol)
   ._pianoroll()
 
-// kick
-$: s("bd:1*4")
+const drums = s("bd:1*4")
   .duck(4)
   .duckdepth(.7)
   .gain(vol)
   ._scope()
+
+stack(
+  arp,
+  chd,
+  drums
+).gain(.2)
